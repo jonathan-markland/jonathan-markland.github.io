@@ -1,8 +1,6 @@
 @if "%~1"=="" goto GameNameParameterMissing
 @if not exist ..\RetroGames\%1Web\wwwroot\bundle.js goto BundleMissing
-
-ren %1 old_%1
-@if ERRORLEVEL 1 goto RenameFailed
+@if exist %1 goto FolderAlreadyExists
 
 mkdir %1
 @if ERRORLEVEL 1 goto MakeDirFailed
@@ -18,11 +16,11 @@ copy ..\RetroGames\%1Web\wwwroot\ %1\
 @goto End
 
 :BundleMissing
-@Echo The %1 bundle.js file cannot be located.  Has build_production.bat been run?
+@Echo The %1 bundle.js file cannot be located at: ..\RetroGames\%1Web\wwwroot\bundle.js  Has build_production.bat been run?
 @goto End
 
-:RenameFailed
-@Echo Failed to rename the old %1 web site folder.  Please check if old_%1 already exists!
+:FolderAlreadyExists
+@Echo There is already a folder called %1.  Please move it out to an archive location, or erase it manually.
 @goto End
 
 :MakeDirFailed
