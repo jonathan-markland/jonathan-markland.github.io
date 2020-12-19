@@ -2,18 +2,90 @@
 <html style="margin:0; padding:0; border:0; width:100%; height:100%;">
 
 <head>
-  <title>Jonathan Markland's github.io</title>
+  <title>Jonathan's github.io</title>
   <meta http-equiv='Content-Type' content='text/html; charset=utf-8'>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
-<body style="margin:0; padding:2em; border:0; width:100%; height:100%; overflow:hidden; background-color:#FFFFFF;">
+<body style="margin:0; padding:0; border:0; width:100%; height:100%; overflow:hidden; background-color:#202020;">
 
-	<H1>Jonathan's GitHub Web Software Showcase</H1>
+	<style>
 
-	<p>All software written by Jonathan Markland, with source presented on GitHub</p>
+	.big-box-menu-container {
+	  width:    100%; 
+	  height:   100%;
+	  display: flex;
+	  flex-direction: row;
+	  flex-wrap: wrap;
+	  justify-content: space-evenly;
+	  align-items: center;
+	  align-content: safe space-evenly;
+	  overflow: auto;
+	}
 
-	<a href="FortAssault/index.html">Fort Assault - Retro computer game re-make in F# + Fable - Click here to play in your browser!</a>
+	.menu-item {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		
+		overflow: hidden;
+		box-sizing: border-box;
+		padding: 1rem;
+		margin: 1rem;
+	}
+	
+	.menu-item a img {
+		max-width: 15rem;
+		max-height: 15rem;
+	}
+
+	.menu-item h1 {
+		font-family: 'Courier New', monospace;
+		font-size: 20pt;
+		font-weight: 800;
+		text-align: center;
+	}
+
+	.menu-item p {
+		font-family: 'Courier New', monospace;
+		font-size: 24pt;
+		font-weight: 800;
+	}
+
+	.clr1 { background-color:#3366FF; }
+	.clr2 { background-color:#CC33FF; }
+	.clr3 { background-color:#FF3366; }
+	.clr4 { background-color:#33CCFF; }
+	.clr5 { background-color:#F5B800; }
+	.clr5 { background-color:#33FFCC; }
+	.clr6 { background-color:#66FF33; }
+	.clr7 { background-color:#FFCC33; }
+	.clr8 { background-color:#CCFF33; }
+
+	</style>
+
+	<div class="big-box-menu-container">
+	
+		<div class="menu-item clr7">
+			<a href="FortAssault/index.html">
+				<img src="FortAssault/menutile.png" alt="Fort Assault" />
+			</a>
+			<p>Fort Assault</p>
+		</div>
+
+		<div class="menu-item clr3">
+			<h1>Jonathan's Free<br/>Retro Games<br/>Collection</h1>
+			<h1>Web browser games<br/>developed by<br/><a href="https://github.com/jonathan-markland/RetroGames">Jonathan Markland</a></h1>
+		</div>
+		
+		<div class="menu-item clr1">
+			<a href="Pacman/index.html">
+				<img src="Pacman/menutile.png" alt="Pacman" />
+			</a>
+			<p>Pac Man</p>
+		</div>
+		
+	</div>
 
 </body>
 </html>

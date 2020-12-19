@@ -5,7 +5,7 @@
 mkdir %1
 @if ERRORLEVEL 1 goto MakeDirFailed
 
-copy ..\RetroGames\%1Web\wwwroot\ %1\
+xcopy ..\RetroGames\%1Web\wwwroot\ %1\ /s
 @if ERRORLEVEL 1 goto CopyFailed
 
 @Echo Success!
