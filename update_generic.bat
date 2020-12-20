@@ -1,5 +1,5 @@
 @if "%~1"=="" goto GameNameParameterMissing
-@if not exist ..\RetroGames\%1Web\wwwroot\bundle.js goto BundleMissing
+@if not exist ..\RetroGames\%1Web\wwwroot\index.html goto IndexMissing
 @if exist %1 goto FolderAlreadyExists
 
 mkdir %1
@@ -15,8 +15,8 @@ xcopy ..\RetroGames\%1Web\wwwroot\ %1\ /s
 @Echo The game name parameter is missing on the command line.
 @goto End
 
-:BundleMissing
-@Echo The %1 bundle.js file cannot be located at: ..\RetroGames\%1Web\wwwroot\bundle.js  Has build_production.bat been run?
+:IndexMissing
+@Echo The %1 index.html file cannot be located at: ..\RetroGames\%1Web\wwwroot\index.html  Has build_production.bat been run?
 @goto End
 
 :FolderAlreadyExists
